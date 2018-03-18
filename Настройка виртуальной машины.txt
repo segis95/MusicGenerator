@@ -1,0 +1,49 @@
+sudo apt-get install python
+sudo apt-get install python-pip
+apt-get update
+sudo apt-get -y install python-pip
+sudo apt-get clean 
+sudo apt-get update
+sudo apt-get install python-pip
+pip install conda
+pip install --upgrade pip
+sudo apt-get install python-pip python-dev python-virtualenv
+sudo apt-get install python3-pip python3-dev python-virtualenv
+virtualenv --system-site-packages -p python3 myEnv
+source ~/myEnv/bin/activate.csh
+easy_install -U pip
+pip3 install --upgrade
+pip3 install --upgrade tfBinaryURL
+pip3 install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.4.0-cp36-cp36m-linux_x86_64.whl
+curl https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86.sh
+pip install numpy
+pip install pandas
+pip install -U scikit-learn
+pip3 install numpy
+pip3 install jupyter
+git clone --recursive https://github.com/dmlc/xgboost
+cd xgboost; make -j4
+cd python-package
+python setup.py install
+sudo apt-get install python-setuptools
+pip3 install --upgrade tensorflow
+pip install keras
+gcloud auth login
+jupyter notebook --generate-config
+sudo nano ~/.jupyter/jupyter_notebook_config.py
+tmux
+jupyter-notebook --no-browser --port=5127
+gsutil cp gs://kkboxbucket1/train_v2.csv .
+gsutil cp xgbsub.csv.gz gs://kkboxbucket1
+git clone --recursive https://github.com/Microsoft/LightGBM
+cd LightGBM
+mkdir build
+cd build
+sudo apt-get install cmake
+cmake ..
+make -j4
+pip3 install lightgbm
+
+sudo apt-get install unzip
+sudo apt-get install p7zip-full
+7za x user_logs.csv.7z
