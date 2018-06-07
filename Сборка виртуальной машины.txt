@@ -1,0 +1,29 @@
+1/ us-west1b
+2/ ядра, оперативка
+3/ Ubuntu 14.04 LTS amd64 xenia image built on 2018-04-04
+4/ Allow HTTP traffic Allow HTTPS traffic
+5/ Disk -> убрать Delete boot disk when instance is deleted
+6/ запустить
+7/ Networking -> External IP -> external ip -> static
+8/ firewall rule: name, targets: all instances in the network
+source ip ranges: 0.0.0.0/0 
+specified protocols and ports: tcp:12345
+9/ vm-instance -> 
+
+jupyter noteboook --generate-config
+sudo nano ~/.jupyter/jupyter_notebook_config.py
+
+c = get_config()
+
+c.Notebook.ip = '*'
+
+c.NotebookApp.open_browser = False
+
+c.Notebook.port = 1000
+
+jupyter notebook password
+
+ctrl+o ctrl+x
+
+jupyter-notebook --nobrowser --port=12345
+
